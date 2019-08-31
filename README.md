@@ -26,13 +26,11 @@ masternode genkey
 
 *(This will be the masternode’s privkey variable. We will need this later…)*
 
-
 **Step 2:** Using the control wallet, enter the following command:
 
 ```
 getaccountaddress "chooseAnyNameForYourMasternode"
 ```
-
 
 **Step 3:** Still in the control wallet, send 10,000 OTH to the address you generated in Step 2. 
 
@@ -44,7 +42,6 @@ Also make sure this is exactly **10,000 OTH**; No less, no more.
 
 Please allow at least 20 block confirmations to complete before moving on.
 
-
 **Step 4:** Still in the control wallet, enter the command into the console:
 
 ```
@@ -52,7 +49,6 @@ masternode outputs
 ```
 
 *This gets the proof of transaction of sending 10,000 OTH*
-
 
 **Step 5:** Still on the main computer, go into the OTH data directory:
 
@@ -76,6 +72,8 @@ MN1 31.14.135.28:21214 894WPpkdbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f49
 
 Substitute with your own values and without the "<>"s.
 
+Lastly, close the control wallet and open again to load the new configuration file.
+
 ## VPS Remote Wallet Install
 
 Install the latest version of the Othila Core wallet onto your masternode. The latest version can be found here: [Othila Core Releases](https://github.com/othila-crypto/Othila/releases).
@@ -86,7 +84,6 @@ Install the latest version of the Othila Core wallet onto your masternode. The l
 cd ~
 ```
 
-
 **Step 2:** From your home directory, download the latest version from the OTH GitHub repository:
 
 ```
@@ -95,13 +92,11 @@ wget https://github.com/othila-crypto/Othila/releases/download/v1.0.2/othila-x86
 
 Always check the releases page for the latest version and update the URL to reflect the most current version.
 
-
 **Step 3:** Unzip & Extract:
 
 ```
 tar -zxvf othila-x86_64-linux-gnu.tar.gz
 ```
-
 
 **Step 4:** Go to your Othila bin directory:
 
@@ -109,13 +104,11 @@ tar -zxvf othila-x86_64-linux-gnu.tar.gz
 cd ~/othila/bin
 ```
 
-
 **Step 5:** Note: If this is the first time running the wallet in the VPS, you’ll need to attempt to start the wallet:
 
 ```
 ./othilad --daemon
 ```
-
 
 **Step 6:** Stop the daemon after the blockchain downloads:
 
@@ -123,20 +116,17 @@ cd ~/othila/bin
 ./othila-cli stop
 ```
 
-
 **Step 7:** Navigate to the othila data directory:
 
 ```
 cd ~/.othila
 ```
 
-
 **Step 8:** Open the configuration file by typing:
 
 ```
 nano othila.conf
 ```
-
 
 **Step 9:** Make the config look like this with your values:
 
@@ -155,7 +145,6 @@ masternodeprivkey=Result of Step 1
 
 *Make sure to replace rpcuser and rpcpassword with your own.*
 
-
 **Step 10:** Save and exit the file:
 
 ```
@@ -163,7 +152,6 @@ Ctr+x to exit and press Y to save changes and press enter to close
 ```
 
 **Please be sure to have port 21214 open on your server firewall if applicable for your control wallet to be able start the masternode remotely.**
-
 
 ## Start the Masternode
 
@@ -173,13 +161,11 @@ Ctr+x to exit and press Y to save changes and press enter to close
 cd ~/othila/bin
 ```
 
-
 **Step 2:** Start the wallet daemon:
 
 ```
 ./othilad
 ```
-
 
 **Step 3:** From the Control wallet debug console:
 
@@ -202,13 +188,11 @@ Where "myalias" is the name of your masternode alias (without brackets)
 ]
 ```
 
-
 **Step 4:** Back in the VPS (remote wallet), start the masternode:
 
 ```
 ./othila-cli startmasternode local false
 ```
-
 
 **Step 5:** Use the following command to check status:
 

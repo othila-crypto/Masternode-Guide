@@ -48,7 +48,7 @@ Please allow at least 20 block confirmations to complete before moving on.
 masternode outputs
 ```
 
-*This gets the proof of transaction of sending 10,000 OTH: When the transaction is completed you see outputidx: 1*
+*This gets the proof of transaction of sending 10,000 OTH*
 
 **Step 5:** Still on the main computer, go into the OTH data directory:
 

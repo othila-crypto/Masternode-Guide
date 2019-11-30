@@ -54,7 +54,7 @@ masternode outputs
 
 OS | Path to OTH
 ------------ | -------------
-Windows | `%Appdata%/Othila/`
+Windows | `%Appdata%/Roaming/Othila/`
 macOS | `~/Library/Application\ Support/Othila/`
 Linux | `~/.othila/`
 
@@ -87,7 +87,7 @@ cd ~
 **Step 2:** From your home directory, download the latest version from the OTH GitHub repository:
 
 ```
-wget https://github.com/othila-crypto/Othila/releases/download/v1.0.2/othila-x86_64-linux-gnu.tar.gz
+wget https://github.com/othila-crypto/Othila/releases/download/v1.0.3/othila-x86_64-linux-gnu.tar.gz
 ```
 
 Always check the releases page for the latest version and update the URL to reflect the most current version.
